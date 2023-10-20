@@ -10,7 +10,7 @@ This app will allow you to create an account, make deposits and withdrawals, and
 ### How to Run
 Visit my static site at [Bad Bank](https://shalese-perezbankingapplication.s3.us-east-2.amazonaws.com/index.html) or
 * Download the zip and extract the files (Or fork the repository and fetch the files)
-* Open the console and navigate to the downloaded folder. Run the following commands: `npm install` (if you do not have it installed) and then `npm start` to start the server
+* Run the following commands from the root folder: `npm install` (if you do not have it installed) and then `npm start` to start the server
 * Open http://localhost:3000 in your browser
 
 #### Roadmap
