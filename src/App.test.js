@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders Bad Bank app', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Get Cash/i);
+  const linkElement = screen.getByText(/Happy Banking/i);
   expect(linkElement).toBeInTheDocument();
 });
