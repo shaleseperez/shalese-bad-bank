@@ -14,7 +14,7 @@ const App = () => {
   return (
     <HashRouter>
       <NavBar/>
-      <UserContext.Provider value={{users:[{name:'',email:'',password:'',balance:0}]}}>
+      <UserContext.Provider value={{users:[{name:'abel',email:'mit.edu',password:'secret',balance:100}]}}>
         <div className="container" style={{padding: "20px"}}>
           <Routes>
           <Route path="/" exact element={<Home/>} />

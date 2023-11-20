@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "../src/card"
+import Card from "./card"
 
 export const UserContext = React.createContext(null);
 

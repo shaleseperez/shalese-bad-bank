@@ -21,7 +21,7 @@ function Withdraw (){
           return false;
         }
     
-        if (withdraw > ctx.users[0].balance){
+        if (withdraw > ctx.users[ctx.users.length -1].balance){
           alert('Please lower the withdraw amount before proceeding')
           setStatus('Error: You can not withdraw more than the available balance.');
           setTimeout(() => setStatus(''), 3000);
@@ -34,7 +34,7 @@ function Withdraw (){
     function handleWithdraw (){
         console.log(withdraw);
         if (!validate(withdraw)) return;
-        ctx.users[0].balance = Number(ctx.users[0].balance) - Number(withdraw);
+        ctx.users[ctx.users.length -1].balance = Number(ctx.users[ctx.users.length -1].balance) - Number(withdraw);
         setShow(false);
       }    
     
@@ -49,10 +49,10 @@ function Withdraw (){
           header={`Hello ${ctx.users.length > 0 ? ctx.users[ctx.users.length -1].name : 'Guest'}!  How much would you like to Withdraw today?`}
           status={status}
           title="Balance"
-          text={`$${ctx.users[0].balance}`}
+          text={`$${ctx.users[ctx.users.length -1].balance}`}
           body={show ? (  
                   <>
-                  Deposit<br/>
+                  Withdraw<br/>
                   <input type="number" 
                   className="form-control" 
                   id="number" 

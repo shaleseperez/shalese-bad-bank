@@ -20,7 +20,7 @@ function CreateAccount(){
         return false;
       }
 
-      if (label == 'email' && !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(field) || email.length === 0) {
+      if (label === 'email' && (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(field) || email.length === 0) {
         alert('Error: Invalid email format')
         setStatus('Error: Invalid email format')
         setTimeout(() => setStatus(''),3000);
@@ -33,7 +33,7 @@ function CreateAccount(){
           setStatus('Error: Password must be at least 8 characters')
           setTimeout(() => setStatus(''), 3000);
           return false;
-         }
+         } 
 
         return true;
     }
@@ -44,7 +44,7 @@ function CreateAccount(){
       if (!validate(email,  'Invalid email format')) return;
       if (!validate(password, 'Password must be at least 8 characters'))return;
 
-      ctx.users.push({name,email,password,balance:currentUser.balance});
+      ctx.users.push({name,email,password,balance:0});
       setShow(false);
     }    
   

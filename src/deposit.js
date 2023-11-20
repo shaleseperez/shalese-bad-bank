@@ -27,7 +27,7 @@ function Deposit(){
     function handleDeposit (){
         console.log(deposit);
         if (!validate(deposit)) return;
-        ctx.users[0].balance = Number(ctx.users[0].balance) + Number(deposit);
+        ctx.users[ctx.users.length -1].balance = Number(ctx.users[ctx.users.length -1].balance) + Number(deposit);
         setShow(false);
       }    
     
@@ -42,7 +42,7 @@ function Deposit(){
           header={`Hello ${ctx.users.length > 0 ? ctx.users[ctx.users.length -1].name : 'Guest'}!  How much would you like to Deposit today?`}
           status={status}
           title="Balance"
-          text={`$${ctx.users[0].balance}`}
+          text={`$${ctx.users[ctx.users.length -1].balance}`}
           body={show ? (  
                   <>
                   Deposit<br/>

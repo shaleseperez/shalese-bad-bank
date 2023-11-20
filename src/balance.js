@@ -22,7 +22,7 @@ function Balance(){
       <>
       Account Holder: {currentUser.name}
       <br/>
-      Account Balance: ${ctx.users[0].balance}
+      Account Balance: ${ctx.users[ctx.users.length -1].balance}
       </>
     }
    
