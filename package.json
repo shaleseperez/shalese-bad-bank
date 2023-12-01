@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "npm start",
-    "build": "npm run build"
+    "build": " "
   },
   "author": "sjames8689@gmail.com",
   "license": "MIT",
