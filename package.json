@@ -2,10 +2,13 @@
   "name": "shalese-bad-bank",
   "version": "1.0.0",
   "main": "index.js",
+  
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "npm start",
+    "build": "npm run build"
   },
-  "author": "abel@mit.edu",
+  "author": "sjames8689@gmail.com",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.4",
