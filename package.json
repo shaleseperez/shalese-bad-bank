@@ -5,8 +5,7 @@
   
   "scripts": {
     "test": "jest",
-    "start": "npm start",
-    "build": " "
+    "start": "node index.js"
   },
   "author": "sjames8689@gmail.com",
   "license": "MIT",
