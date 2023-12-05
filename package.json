@@ -5,7 +5,8 @@
   "author": "shalese",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "index.js"
   },
   "dependencies": {
     "cors": "^2.8.4",
