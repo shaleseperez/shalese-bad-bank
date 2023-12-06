@@ -1,8 +1,17 @@
-var express = require('express');
-var app     = express();
-var cors    = require('cors');
-var dal     = require('./dal.js');
+require("dotenv").config();
+const express = require('express');
+const cors    = require('cors');
+const dal     = require('./dal.js');
 const e = require('express');
+const connectDB = require("./db.js")
+
+
+//connect to DB
+connectDB();
+
+//express app
+const app     = express();
+
 
 // used to serve static files from public directory
 app.use(express.static('public'));
@@ -101,7 +110,7 @@ app.get('/account/all', function (req, res) {
             res.send(docs);
     });
 });
-
-var port = process.env.PORT || 3000
-app.listen(port);
-console.log('Running on port: ' + port);
+const port    = process.env.PORT || 3000;
+const server = app.listen(port, () => 
+console.log(`Listening on port: ${port}`)
+);
